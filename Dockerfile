@@ -4,6 +4,8 @@ RUN apk update && apk add -u mysql-client
 
 WORKDIR /app
 
-# ENTRYPOINT ["mysql"]
+ADD sync.sh /app/sync.sh
+
+CMD ["/app/sync.sh"]
 
 

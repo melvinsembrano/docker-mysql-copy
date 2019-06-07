@@ -2,4 +2,6 @@
 
 set -ex
 
-docker run --rm -it --env-file ./.env.test -v $PWD:/app melvinsembrano/mysql-copy sh
+DIR=$(dirname $0)
+
+docker run --rm -it --env-file $DIR/.env.test -v $PWD:/app melvinsembrano/mysql-copy sh
